@@ -1,0 +1,10 @@
+- hosts: 127.0.0.1
+  connection: local
+  tasks:
+    - name: "Insert Environment Variable"
+      include_vars:
+        file: data.yaml
+        name: data
+    - name: "run app"
+      shell: python helloWorld.py
+      environment: "{{  data  }}"
