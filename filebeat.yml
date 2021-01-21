@@ -26,7 +26,7 @@ filebeat.inputs:
   # Paths that should be crawled and fetched. Glob based paths.
   paths:
     - /Users/Rimma.Chepik/Desktop/HelloWorld/test.log
-  index: "filebeat-test"
+  index: "filebeat_test_rimma"
 
   # Exclude lines. A list of regular expressions to match. It drops the lines that are
   # matching any regular expression from the list.
@@ -105,12 +105,12 @@ filebeat.config.modules:
 
 # ======================= Elasticsearch template setting =======================
 
-setup.template.name: "filebeat-test"
-setup.template.pattern: "filebeat-test"
+setup.template.name: "filebeat_test_rimma"
+setup.template.pattern: "filebeat_test_rimma"
 setup.template.enabled: true
 setup.template.settings:
   index.number_of_shards: 1
-  _source.enabled: false
+  _source.enabled: true
 
 # ================================== General ===================================
 
@@ -177,7 +177,7 @@ cloud.auth: "kibana-admin:SNpVn9bQe77R%_kL"
 output.elasticsearch:
   # Array of hosts to connect to.
   hosts: ["localhost:9200"]
-  index: "filebeat-test-%{+yyyy.MM.dd}"
+  index: "filebeat_test_rimma%{+yyyy.MM.dd}"
   ilm.enabled: false
 
   # Protocol - either `http` (default) or `https`.
