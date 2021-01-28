@@ -1,10 +1,7 @@
+resource "local_file" "Hello" {
+    content = <<EOT
 import logging
 import os
-from os import environ
-
-
-# Set environment variables
-os.environ['API_USER'] = 'rimma'
 
 # Get environment variables
 USER = os.getenv('API_USER')
@@ -19,3 +16,6 @@ print = logger.info
 if environ.get('USER') is not None:
     print('env var is visable USER: ' + USER) 
 
+EOT
+    filename = "/Users/Rimma.Chepik/Desktop/HelloWorld/helloWorld.py"
+}
