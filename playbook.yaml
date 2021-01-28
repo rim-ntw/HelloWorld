@@ -8,7 +8,7 @@
    # - name: "PARSING .ENV FILE INTO LOCAL PLAYBOOK variable python script"
      # command: cat {{playbook_dir}}/.env 
     #  register: ENV   
-    - name: "run app"
+    - name: "Run the App"
    #   script: helloWorld.py
       shell: python helloWorld.py
       environment: "{{  data  }}"
