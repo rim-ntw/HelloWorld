@@ -3,6 +3,8 @@
 
 This is a HelloWorld application and when you run it, it will take logs and pass them through the ElasticSearch and then you can view it in Kibana. 
 
+
+
 #Prerequisites
 
 You will need:
@@ -11,6 +13,8 @@ You will need:
 - Filebeat installed
 - Ansible installed
 - This repo cloned
+
+
 
 
 #Setup and Execution
